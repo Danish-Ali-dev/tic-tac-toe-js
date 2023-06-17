@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Libre+Franklin:wght@300&family=Mukta&family=Roboto+Condensed&family=Roboto:wght@300&family=Shizuru&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    /* background-image: url("celebration.gif"); */
+}
+
+nav{
+    height: 8vh;
+    background-color: rgb(5, 5, 44);
+    color: white;
+    font-size: 2em;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+nav ul{
+    list-style: none;
+}
+
+.gameContainer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    font-family: 'Libre Franklin', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    position: relative;
+}
+
+.box{
+    font-size: 9vw;
+    border: 2px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(235, 235, 250);
+}
+
+.gameInfo{
+    font-family: 'Baloo Bhaina 2', cursive;
+    margin: 5px 10px;
+    padding: 3px 35px;
+    font-size: 1.5em;
+
+}
+
+.info{
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+.imgBox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+    margin-left: 200px;
+}
+
+.bt{
+    border-top: 0;
+}
+.bb{
+    border-bottom: 0;
+}
+.br{
+    border-right: 0;
+}
+.bl{
+    border-left: 0;
+}
+
+.reset{
+    padding: 4px 22px;
+    margin: 3px 45px;
+    background-image: linear-gradient(to right, rgb(226, 99, 226) , rgb(144, 98, 243));
+    background-color: rgb(173, 207, 221);
+    color: black;
+    font-size: 0.8em;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.reset:hover{
+    background-image: linear-gradient(to right, rgb(235, 152, 235) , rgb(177, 151, 233));
+    color: white;
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #911d91;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    .imgBox img{
+        margin-left: 20px;
+    }
+    nav{
+        font-size: 1.2em;
+    }
+}
